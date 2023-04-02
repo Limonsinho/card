@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        :root{
+            --blanco: #F0F2F5;
+            --naranja: #d19209;
+            --negro: #000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /*
+            background-image: url('https://wallpaperaccess.com/full/1427901.jpg');
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            */
+            background-color: var(--negro);
+        }
+
+        .contenedor {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            user-select: none;
+            color: var(--negro);
+        }
+
+        main {
+            width: 325px;
+            height: 525px;
+            background-color: var(--naranja);
+            border-radius: 10px;
+            border: 3px var(--negro) solid;
+            box-shadow: 0 0 5px #fff8, 0 0 7px #fff8, 0 0 10px #fff8;
+        }
+
+        main:hover {
+            animation: brillo infinite 2s;
+        }
+
+        @keyframes brillo{
+            0%{
+                box-shadow: 0 0 5px #fff8, 0 0 5px #fff8, 0 0 5px #fff8;
+            }
+            50% {
+                box-shadow: 0 0 20px #fff8, 0 0 80px #fff8, 0 0 160px #fff8;
+            }
+            100% {
+                box-shadow: 0 0 5px #fff8, 0 0 5px #fff8, 0 0 5px #fff8;
+            }
+        }
+
+        header {
+            position: relative;
+            height: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            position: absolute;
+            top: -20px;
+            padding: 5px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            background-color: var(--naranja);
+            border: 3px solid #000;
+            box-shadow: 0 0 5px #fff8, 0 0 7px #fff8, 0 0 10px #fff8;
+        }
+        
+        .imagen {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: rotate3d(0, 0, 0, 0rad);
+            transition: 2s ;
+        }
+
+        .imagen:hover {
+            transform: rotate3d(0, 0.1, 0, 3.142rad);
+            transition: 1.5s ;
+        }
+
+        .imagen img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ficha_tecnica {
+            margin-top: 1.5rem;
+        }
+
+        .ficha_tecnica > div {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .comentarios{
+            margin: 5px 0 0 10px;
+        }
